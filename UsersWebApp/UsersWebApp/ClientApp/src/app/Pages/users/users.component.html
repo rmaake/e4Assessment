@@ -1,0 +1,29 @@
+<h1>Users WebApp</h1>
+<p>Welcome to our users page</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+          <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>User Id</th> 
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Phone Numbers</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of users">
+                  <td>{{user.userId}}</td>
+                  <td>{{user.firstName}}</td>
+                  <td>{{user.lastName}}</td>
+                  <td><p *ngFor="let phoneNumber of user.phoneNumbers">{{phoneNumber.number}}</p></td>
+                  <td><button class="btn btn-danger" (click)="modifyUser(user.userId)" [disabled]="isLoading">Modify</button></td>
+                  <td><button class="btn btn-danger" (click)="deleteUser(user.userId)" [disabled]="isLoading">Delete</button></td>
+                </tr>
+              </tbody>
+            </table>
+            <span>{{msgStr}}</span>
+        </div>
+      </div>
+</div>

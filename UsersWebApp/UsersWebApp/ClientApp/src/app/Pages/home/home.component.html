@@ -1,0 +1,90 @@
+<h1>Users WebApp</h1>
+<p>Welcome to our registration page</p>
+<div class="container">
+  <form [formGroup]="userForm" (ngSubmit)="saveUser()">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="firstName">First Name: 
+            <span class="text-danger"  *ngIf="userForm.get('firstName')?.errors && userForm.get('firstName')?.hasError('required')">*</span>
+          </label>
+          <input type="text" class="form-control" id="firstName" placeholder="First Name" formControlName="firstName" [(ngModel)] = "user.firstName" maxlength="250" required >
+          <div *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.errors && (userForm.get('firstName')?.dirty || userForm.get('firstName')?.touched)">
+              <small class="text-danger"
+                  *ngIf="userForm.get('firstName')?.hasError('required')">
+                  This field is required.
+              </small>
+              <small class="text-danger"
+                  *ngIf="userForm.get('firstName')?.hasError('minlength')">
+                  The minimum length for this field is {{userForm.get('firstName')?.errors?.minlength.requiredLength}} characters.
+              </small>
+              <small class="text-danger"
+                  *ngIf="userForm.get('firstName')?.hasError('maxlength')">
+                  The maximum length for this field is {{userForm.get('firstName')?.errors?.maxlength.requiredLength}} characters.
+              </small>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="lastName">Last Name:
+            <span class="text-danger"  *ngIf="userForm.get('lastName')?.errors && userForm.get('lastName')?.hasError('required')">*</span>
+          </label>
+          <input type="text" class="form-control" id="lastName" placeholder="Last Name" formControlName="lastName" [(ngModel)] = "user.lastName" maxlength="250" required>
+          <div *ngIf="userForm.get('lastName')?.invalid && userForm.get('lastName')?.errors && (userForm.get('lastName')?.dirty || userForm.get('lastName')?.touched)">
+            <small class="text-danger"
+                *ngIf="userForm.get('lastName')?.hasError('required')">
+                This field is required.
+            </small>
+            <small class="text-danger"
+                *ngIf="userForm.get('lastName')?.hasError('minlength')">
+                The minimum length for this field is {{userForm.get('firstlastNameName')?.errors?.minlength.requiredLength}} characters.
+            </small>
+            <small class="text-danger"
+                *ngIf="userForm.get('lastName')?.hasError('maxlength')">
+                The maximum length for this field is {{userForm.get('lastName')?.errors?.maxlength.requiredLength}} characters.
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number" formControlName="phoneNumber" [(ngModel)] = "phoneNumber" maxlength="10" minlength="10">
+          
+          <br/>
+          <button class="btn btn-success" (click)="addPhoneNumber()" [disabled]="userForm.get('phoneNumber')?.invalid"> Add </button>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Phone Numbers</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let phoneNumber of user.phoneNumbers">
+              <td>{{phoneNumber.number}}</td>
+              <td><button class="btn btn-danger" (click)="deletePhoneNumber(phoneNumber.number)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <span>{{msgStr}}</span>
+          <button class="btn btn-success form-control" type="submit" [disabled]="isLoading || (userForm.invalid && user.phoneNumbers.length == 0) || user.phoneNumbers.length == 0">Save User</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
