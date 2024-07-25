@@ -29,12 +29,12 @@ namespace StudentRestAPI.DAL.Repository.Implementations
 
         public IEnumerable<T> Get(int page = 1, int pageSize = 10)
         {
-            return _dbContext.Set<T>().Skip(pageSize * (page - 1)).Take(page).ToList();
+            return _dbContext.Set<T>().Skip(pageSize * (page - 1)).Take(pageSize).ToList();
         }
 
         public IEnumerable<T> Get(Func<T, bool> predicate, int page = 1, int pageSize = 10)
         {
-            return _dbContext.Set<T>().Where(predicate).Skip(pageSize * (page - 1)).Take(page).ToList();
+            return _dbContext.Set<T>().Where(predicate).Skip(pageSize * (page - 1)).Take(pageSize).ToList();
         }
 
         public T GetById(int id)
