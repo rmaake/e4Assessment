@@ -3,18 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRestAPI", "StudentRestAPI\StudentRestAPI.csproj", "{C6FF7FFA-04A4-4EBE-8275-D3E93D99FAB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentRestAPI", "StudentRestAPI\StudentRestAPI.csproj", "{C6FF7FFA-04A4-4EBE-8275-D3E93D99FAB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRestAPI.DAL", "StudentRestAPI.DAL\StudentRestAPI.DAL.csproj", "{0F7E493F-316C-4AE7-83F7-BB22DF927EE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentRestAPI.DAL", "StudentRestAPI.DAL\StudentRestAPI.DAL.csproj", "{0F7E493F-316C-4AE7-83F7-BB22DF927EE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRestAPI.Business", "StudentRestAPI.Business\StudentRestAPI.Business.csproj", "{99211B68-6AD2-463C-891F-5D3EC00A5534}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentRestAPI.Business", "StudentRestAPI.Business\StudentRestAPI.Business.csproj", "{99211B68-6AD2-463C-891F-5D3EC00A5534}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{30E852C4-5363-4868-8444-01466C8D9C68}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRestAPI.Test", "StudentRestAPI.Test\StudentRestAPI.Test.csproj", "{D68BAB00-6D4E-42F9-AA31-3A217F2647B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +32,6 @@ Global
 		{99211B68-6AD2-463C-891F-5D3EC00A5534}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99211B68-6AD2-463C-891F-5D3EC00A5534}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99211B68-6AD2-463C-891F-5D3EC00A5534}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D68BAB00-6D4E-42F9-AA31-3A217F2647B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D68BAB00-6D4E-42F9-AA31-3A217F2647B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D68BAB00-6D4E-42F9-AA31-3A217F2647B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D68BAB00-6D4E-42F9-AA31-3A217F2647B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

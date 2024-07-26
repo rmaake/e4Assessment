@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿//Time taken to build and test: 2 hours and 00 minutes
 
 int Add(string input)
 {

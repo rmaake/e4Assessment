@@ -1,6 +1,8 @@
 using UsersWebApp.Models.Config;
 using UsersWebApp.Repository;
 
+//Time taken to build and test: 4 hours and 30 minutes
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

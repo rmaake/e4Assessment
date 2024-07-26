@@ -1,6 +1,7 @@
 
 using StudentRestAPI.IoC;
 
+//Time taken to build and test: 2 hours and 30 minutes
 void RegisterServices(IServiceCollection services, IConfiguration configuration)
 {
     services.RegisterAllTypes(configuration);
